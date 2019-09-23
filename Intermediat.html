@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+
+
+<script>
+ 
+ // Int 1: Anonymus function: 
+
+
+var capitalize = function(a) {
+	
+	var firstLetter = a.charAt(0).toUpperCase();
+	var rest = a.substring(1);
+	document.write(firstLetter + " " + rest);
+
+};
+
+capitalize("i am a JavaScript Hacker");
+
+
+/*2 Intermediate | Average Grade
+Ask the user to provide you with three numbers, which are the grades from Math, Physics and English. After it is provided to you, make the calculation and print them on the screen. Make sure that the variables are numbers.
+
+E.g. If user puts the following grades 3, 4, 5 the result should be:
+
+Sum:12
+
+Average: 4*/
+
+ /*	var math = prompt("Please enter your Math Grade");
+ 	var math = parseInt(math);
+
+ 	var physik = prompt("Please enter your Physics Grade");
+ 	var physik = parseInt(physik);
+
+	var english = prompt("Please enter your English Grade");
+	var english = parseInt(english);
+
+ function grades (math, physik,english) {
+
+ 	var sum = math + physik + english;
+ 	var average = sum/3; 
+
+ 	document.write("<br/>Sum: " + sum + "<br/>Average: " + average);
+
+ }
+
+ grades(math, physik, english);*/
+
+ /*1 Advanced | Time Convert*/
+
+
+function timeConvert(minutes) {
+	hours = Math.floor(minutes / 60);
+	min = minutes % 60; 
+
+	document.write("<br>" + hours + " hour(s) and " + min + " minute(s)");
+}
+
+timeConvert(200);
+
+
+/*2 Advanced | Yesterday's date
+Write an anonymous JavaScript function to calculate yesterday's date. When the function is called we can pass one string as an argument (in the date form). We should get yesterday's date as the output .
+
+E.g. If we pass as an argument the following string 'Feb 23, 2017'  the program should output 'Wed Feb 22 2017'*/
+
+var yesterday = function (a) {
+var theDay = new Date(a);
+var weekday = theDay.getDay() -1;
+var weekdays = ["Son" , "Mon", "Tue", "Wed", "Thurs", "Fri", "Sat"];
+var yesterday = theDay.getDate() - 1;
+var month = theDay.getMonth();
+var monthArray = ["Jan", "Feb", "March", "April", "May", "June", "July", "August", "Sept", "Oct", "Nov", "Dec"];
+var year = theDay.getFullYear();
+
+document.write("<br>");
+
+document.write(weekdays[weekday] + " " + monthArray[month] + " " + yesterday + ", " + year);
+
+}
+
+yesterday('Feb 23, 2017');
+
+/*function YesterdaysDate(month, day,) {
+
+	var today = new Date(); 
+	var Datum = today.toDateString();
+
+	/*var year = today.getFullYear();
+	var month = today.getMonth() + 1;
+	var day = today.getDate();
+	var yesterday = day - 1;
+
+document.write(month + " " + yesterday + ", " + year);*/
+
+	/*document.write(Datum);
+
+
+}
+
+YesterdaysDate();
+
+/*var today = new Date();
+	var currentYear = today.getFullYear();
+
+	var age1 = currentYear - birthYear;
+	var age2 = age1 - 1;*/
+
+
+	/*var birthday = new Date('August 19, 1975 23:15:30');
+var date1 = birthday.getDate();*/
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

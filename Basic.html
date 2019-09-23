@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+
+	<p id='message'></p>
+
+<script type="text/javascript">
+	
+//Basic one: 
+function crystalGazer(children, partner, location, job) {
+
+var sent = "You will be a " + job + " in " + location + " and married to " + partner + " with " + children + " children"
+	document.write(sent);
+	return(sent);
+}
+
+
+crystalGazer(3, "John", "Vienna", "lawer"); 
+
+// Basic two
+
+function ageCalculator(birthYear, currentYear) {
+
+	var age1 = currentYear - birthYear;
+	var age2 = age1 - 1;
+
+	document.write("<br/>You are either " + age2 + " or " + age1);
+}
+
+ageCalculator(1990, 2019);
+
+
+// Basic three:
+
+function ageCalculator2(birthYear) {
+	var today = new Date();
+	var currentYear = today.getFullYear();
+
+	var age1 = currentYear - birthYear;
+	var age2 = age1 - 1;
+
+	document.write("<br/>You are either " + age2 + " or " + age1);
+}
+
+ageCalculator2(1990);
+
+/* Basic 4 | Degree-Radian Conversion
+Create a JavaScript function that converts degrees to radians. The function accepts one argument, the degrees, and outputs the radians based on them. The formula for converting degrees to radians is: "degrees * (pi/180)"
+
+E.g. If user passes 90 degrees it should get the result of 1.57079 radians*/
+
+function conversion(degrees) {
+	var result = degrees * Math.PI/180;
+	document.write("<br/>" + result);
+	return result;
+}
+
+conversion(90);
+
+/*Basic 5 | Area and Volume of a box
+Create a function that calculates the area and volume of a box.*/
+
+
+function boxvolume(width, height, depth) {
+	var area = width * height;
+	var volume = width*height*depth; 
+	var result = [area, volume];
+	return result
+
+}
+
+document.write("<br>The area of the box is: " + boxvolume(3,5,7)[0]  + "<br>The volume of the box is: " + boxvolume(3,5,7)[1]);
+
+/* Basic 6 | Try - catch
+
+Using try...catch block, handle the error that occurs in the following code:*/
+
+
+   try {
+    var person = prompts("Please enter your name", "Harry Potter");
+
+    document.getElementById("message").innerHTML =
+
+    "Hello " + person + "! How are you today?";
+
+    }catch(fehler) {
+
+    	var errMessage = fehler.message; 
+    	document.write("<br>" + errMessage);
+    	var err = new Array();
+    	var err = errMessage.split(" ");
+    	console.table(err)
+
+   document.write("<br> An error has occured ... The " + err[0] + " must be fixed");
+	}
+
+
+	
+</script>
+
+</body>
+</html>
